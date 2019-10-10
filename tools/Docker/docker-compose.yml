@@ -4,6 +4,6 @@ services:
     image: php:7.0-apache
     container_name: sepconeval-httpd
     ports:
-      - "8300:80"
+      - "8500:80"
     volumes:
       - ../../:/var/www/html
