@@ -1,15 +1,17 @@
-
 /*
     BeaqleJS - HTML5 and JavaScript framework for listening tests
     Copyright (C) 2011-2014  Sebastian Kraft
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
+
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
+
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>
 */
@@ -336,26 +338,26 @@ function getDateStamp() {
 // provide a virtual download to text file with a specified file name
 function saveTextAsFile(txt, fileName)
 {
-    var fileBlob = new Blob([txt], {type:'text/plain'});
+	var fileBlob = new Blob([txt], {type:'text/plain'});
 
-    var downloadLink = document.createElement("a");
-    downloadLink.download = fileName;
-    downloadLink.innerHTML = "Download File";
+	var downloadLink = document.createElement("a");
+	downloadLink.download = fileName;
+	downloadLink.innerHTML = "Download File";
 
     // safari does not download text files but tries to open them in the browser
     // so let's at least open a new window for that
     if (clientIsSafari())
         downloadLink.target = "_blank";
 
-    downloadLink.href = window.URL.createObjectURL(fileBlob);
-    downloadLink.onclick = function (event) {document.body.removeChild(event.target);};
-    downloadLink.style.display = "none";
+	downloadLink.href = window.URL.createObjectURL(fileBlob);
+	downloadLink.onclick = function (event) {document.body.removeChild(event.target);};
+	downloadLink.style.display = "none";
 
-    // Firefox requires the link to be added to the DOM
-    // before it can be clicked.
-    document.body.appendChild(downloadLink);
+	// Firefox requires the link to be added to the DOM
+	// before it can be clicked.
+	document.body.appendChild(downloadLink);
 
-    downloadLink.click();
+	downloadLink.click();
 }
 
 // shuffle array entries using the Fisher-Yates algorithm
@@ -418,10 +420,10 @@ $.extend({ alert: function (message, title) {
 
         // some state variables
         this.TestState = {
-            "CurrentTest": -1,      // the current test index
-            "TestIsRunning": 0,     // is true if test is running, false when finished or not yet started
-            "FileMappings": [],     // json array with random file mappings
-            "Ratings": [],          // json array with ratings
+            "CurrentTest": -1, 		// the current test index
+            "TestIsRunning": 0,		// is true if test is running, false when finished or not yet started
+            "FileMappings": [],		// json array with random file mappings
+            "Ratings": [],			// json array with ratings
             "EvalResults": [],      // json array to store the evaluated test results
             "AudiosInLoadQueue": -1,
             "AudioLoadError": false
@@ -534,7 +536,7 @@ $.extend({ alert: function (message, title) {
         // go to next test
         if (this.TestState.CurrentTest<this.TestState.TestSequence.length-1) {
             this.TestState.CurrentTest = this.TestState.CurrentTest+1;
-            this.runTest(this.TestState.TestSequence[this.TestState.CurrentTest]);
+        	this.runTest(this.TestState.TestSequence[this.TestState.CurrentTest]);
         } else {
             // if previous test was last one, ask before loading final page and then exit test
             if (confirm('This was the last test. Do you want to finish?')) {
@@ -589,7 +591,7 @@ $.extend({ alert: function (message, title) {
             this.TestState.Runtime[this.TestState.TestSequence[this.TestState.CurrentTest]] += stopTime - this.TestState.startTime;
             // go to previous test
             this.TestState.CurrentTest = this.TestState.CurrentTest-1;
-            this.runTest(this.TestState.TestSequence[this.TestState.CurrentTest]);
+        	this.runTest(this.TestState.TestSequence[this.TestState.CurrentTest]);
         }
     }
 
@@ -637,7 +639,7 @@ $.extend({ alert: function (message, title) {
 
         // run first test
         this.TestState.CurrentTest = 0;
-        this.runTest(this.TestState.TestSequence[this.TestState.CurrentTest]);
+    	this.runTest(this.TestState.TestSequence[this.TestState.CurrentTest]);
     }
 
     // ###################################################################
@@ -1305,7 +1307,7 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
         cell[1] = row[1].insertCell(-1);
         cell[1].innerHTML = "<input type='radio' name='ItemSelection' id='selectNoPref'/>";
         cell[2] = row[1].insertCell(-1);
-        cell[2].innerHTML = "<input type='radio' name='ItemSelection' id='selectB'/>";  
+        cell[2].innerHTML = "<input type='radio' name='ItemSelection' id='selectB'/>";
         cell[3] = row[1].insertCell(-1);
         cell[4] = row[1].insertCell(-1);
 
@@ -1314,15 +1316,15 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
         // $.alert(booboo)
 
         if ((TestName == "In")) {
-            cell[4].innerHTML = "&larr; Please select preferred clip in terms of Intelligibility, in comparision to the reference,<br/>or select <i>no pref.</i> for no clear preference.";  
+            cell[4].innerHTML = "&larr; Please select the clip which is easier to understand. Please select 'no pref.' if both are easy to understand";
             // return true;
         } else if ((TestName == "Se")) {
-            cell[4].innerHTML = "&larr; Please select preferred clip in terms of source separation, in comparision to the reference. The preffered clip in this case should not have elements from the mixture.<br/>or select <i>no pref.</i> for no clear preference.";  
+            cell[4].innerHTML = "&larr; 请在A，B两个素材中选择包含背景音乐最少的那一个。你可以听“Mixture”素材来体会背景音乐。";
 
         } else{
-            cell[4].innerHTML = "&larr; Please select preferred clip in terms of audio quality, in comparision to the refernce,<br/>or select <i>no pref.</i> for no clear preference.";  
+            cell[4].innerHTML = "&larr; Please select the clip which you feel has better quality. Please select 'no pref.' if you think both have similar quality";
 
-        }        
+        }
 
         row[2]  = tab.insertRow(-1);
         cell[0] = row[2].insertCell(-1);
