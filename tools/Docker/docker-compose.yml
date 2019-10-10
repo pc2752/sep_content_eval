@@ -2,8 +2,8 @@ version: "2"
 services:
   httpd:
     image: php:7.0-apache
-    container_name: syntheval-httpd
+    container_name: sep_content_eval-httpd
     ports:
-      - "8200:80"
+      - "8300:80"
     volumes:
       - ../../:/var/www/html
