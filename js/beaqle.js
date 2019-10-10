@@ -870,10 +870,10 @@ $.extend({ alert: function (message, title) {
                     $('#SubmitError').show();
                     $('#SubmitError > #ErrorCode').html(xhr.status);
                     $("#SubmitBox > .submitOnline").hide();
-                    if (this.TestConfig.SupervisorContact) {
-                        $("#SubmitBox > .submitEmail").show();
-                        $(".supervisorEmail").html(this.TestConfig.SupervisorContact);
-                    }
+                    // if (this.TestConfig.SupervisorContact) {
+                    //     $("#SubmitBox > .submitEmail").show();
+                    //     $(".supervisorEmail").html(this.TestConfig.SupervisorContact);
+                    // }
                     if (testHandle.browserFeatures.webAPIs['Blob']) {
                         $("#SubmitBox > .submitDownload").show();
                     } else {
