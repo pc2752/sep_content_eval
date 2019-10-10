@@ -1217,12 +1217,12 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
         // create new test table
         var tab = document.createElement('table');
         tab.setAttribute('id','TestTable');
-
+            
         var fileID = "";
         var row = new Array();
         var cell = new Array();
 
-
+  
         if (!this.TestState.FileMappings[TestIdx]) {
            this.TestState.FileMappings[TestIdx] = {"A": "", "B": ""};
            var RandFileNumber = Math.random();
@@ -1232,9 +1232,9 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
             } else {
                this.TestState.FileMappings[TestIdx].A = "2";
                this.TestState.FileMappings[TestIdx].B = "1";
-            }
+            }                
         }
-
+            
         // add reference
         if ((this.TestConfig.Testsets[TestIdx].Name == "Intelligibility 1")) {
             $.alert("You are now starting the intelligibility tests, please select the clip out of A and B, which is more clearly understandable")
@@ -1243,12 +1243,12 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
             $.alert("You are now starting the source separation tests, please select the clip out of A and B, which has less elements from the backing track. You can listen to the Mixture signal to get an idea of the backing track.")
 
         } else if ((this.TestConfig.Testsets[TestIdx].Name == "Audio Quality 1")) {
-            $.alert("You are now starting the audio quality tests. Please select the clip out of A and B, which has better quality")
+            $.alert("Please select preferred clip in terms of audio quality, in comparision to the reference, or select no pref. for no clear preference.")
 
         } else{
-            // cell[4].innerHTML = "&larr; Please select preferred clip in terms of audio quality, in comparision to the refernce,<br/>or select <i>no pref.</i> for no clear preference.";
+            // cell[4].innerHTML = "&larr; Please select preferred clip in terms of audio quality, in comparision to the refernce,<br/>or select <i>no pref.</i> for no clear preference.";  
 
-        }
+        }      
 
 
         fileID = "A";
@@ -1258,18 +1258,17 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
         this.addAudio(TestIdx, fileID, fileID);
 
         fileID = "X";
-        cell[1] = row.insertCell(-1);
-        // if ((this.TestConfig.Testsets[TestIdx].Files[fileID] == 0)) {
-        //     cell[1] = row.insertCell(-1);
-        //     // $.alert("booboo")
-        //     // return true;
-        // } else {
-        //     var relID  = "X";
-        //     cell[1] = row.insertCell(-1);
-        //     cell[1].innerHTML =  '<button id="play'+relID+'Btn" class="playButton" rel="'+fileID+'">Reference</button>';
-        //     this.addAudio(TestIdx, fileID, relID);
-        //     // return false;
-        // }
+        if ((this.TestConfig.Testsets[TestIdx].Files[fileID] == 0)) {
+            cell[1] = row.insertCell(-1);
+            // $.alert("booboo")
+            // return true;
+        } else {
+            var relID  = "X";
+            cell[1] = row.insertCell(-1);
+            cell[1].innerHTML =  '<button id="play'+relID+'Btn" class="playButton" rel="'+fileID+'">Reference</button>';
+            this.addAudio(TestIdx, fileID, relID);
+            // return false;
+        }
 
 
         fileID = "B";
@@ -1279,9 +1278,9 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
 
         cell[3] = row.insertCell(-1);
         cell[3].innerHTML = "<button class='stopButton'>Stop</button>";
-
+        
         cell[4] = row.insertCell(-1);
-        cell[4].innerHTML = "Press buttons to start/stop playback.";
+        cell[4].innerHTML = "Press buttons to start/stop playback."; 
 
 
         fileID = "Y";
@@ -1301,14 +1300,14 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
             // return false;
         }
 
-        // $.alert("At least one of your ratings has to be " + this.TestConfig.Testsets[TestIdx].Files[fileID] + " for valid results!", "Warning!")
+        // $.alert("At least one of your ratings has to be " + this.TestConfig.Testsets[TestIdx].Files[fileID] + " for valid results!", "Warning!") 
         row[1]  = tab.insertRow(-1);
         cell[0] = row[1].insertCell(-1);
         cell[0].innerHTML = "<input type='radio' name='ItemSelection' id='selectA'/>";
         cell[1] = row[1].insertCell(-1);
         cell[1].innerHTML = "<input type='radio' name='ItemSelection' id='selectNoPref'/>";
         cell[2] = row[1].insertCell(-1);
-        cell[2].innerHTML = "<input type='radio' name='ItemSelection' id='selectB'/>";
+        cell[2].innerHTML = "<input type='radio' name='ItemSelection' id='selectB'/>";  
         cell[3] = row[1].insertCell(-1);
         cell[4] = row[1].insertCell(-1);
 
@@ -1317,16 +1316,16 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
         // $.alert(booboo)
 
         if ((TestName == "In")) {
-            cell[4].innerHTML = "&larr; Please select the clip which is easier to understand. Please select 'no pref.' if both are easy to understand";
+            cell[4].innerHTML = "&larr; Please select preferred clip in terms of Intelligibility, in comparision to the reference,<br/>or select <i>no pref.</i> for no clear preference.";  
             // return true;
         } else if ((TestName == "Se")) {
-            cell[4].innerHTML = "&larr; 请在A，B两个素材中选择包含背景音乐最少的那一个。你可以听“Mixture”素材来体会背景音乐。";
+            cell[4].innerHTML = "&larr; Please select preferred clip in terms of source separation, in comparision to the reference. The preffered clip in this case should not have elements from the mixture.<br/>or select <i>no pref.</i> for no clear preference.";  
 
         } else{
-            cell[4].innerHTML = "&larr; Please select the clip which you feel has better quality. Please select 'no pref.' if you think both have similar quality";
+            cell[4].innerHTML = "&larr; Please select preferred clip in terms of audio quality, in comparision to the refernce,<br/>or select <i>no pref.</i> for no clear preference.";  
 
-        }
-
+        }        
+       
         row[2]  = tab.insertRow(-1);
         cell[0] = row[2].insertCell(-1);
         cell[0].innerHTML = "A";
@@ -1336,15 +1335,15 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
         cell[2].innerHTML = "B";
         cell[3] = row[2].insertCell(-1);
         cell[4] = row[2].insertCell(-1);
-
+       
         // add spacing
         row = tab.insertRow(-1);
-        row.setAttribute("height","5");
+        row.setAttribute("height","5");  
 
         // append the created table to the DOM
 
 
-        $('#TableContainer').append(tab);
+        $('#TableContainer').append(tab);   
 
         // randomly preselect one radio button
         if (typeof this.TestState.Ratings[TestIdx] == 'undefined') {
@@ -1355,6 +1354,7 @@ AbxTest.prototype.createTestDOM = function (TestIdx) {
             }*/
         }
 }
+
 
 
 AbxTest.prototype.readRatings = function (TestIdx) {
