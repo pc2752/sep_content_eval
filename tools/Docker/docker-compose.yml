@@ -2,7 +2,7 @@ version: "2"
 services:
   httpd:
     image: php:7.0-apache
-    container_name: sepconeval-httpd
+    container_name: beaqlejs-httpd2
     ports:
       - "8300:80"
     volumes:
