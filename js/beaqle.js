@@ -866,7 +866,7 @@ $.extend({ alert: function (message, title) {
                         $('#SubmitData').button('option',{ icons: { primary: 'ui-icon-alert' }});
                     }
                 })
-            .fail (function (xhr, ajaxOptions, thrownError){
+            .fail ((xhr, ajaxOptions, thrownError)=>{
                     $('#SubmitError').show();
                     $('#SubmitError > #ErrorCode').html(xhr.status);
                     $("#SubmitBox > .submitOnline").hide();

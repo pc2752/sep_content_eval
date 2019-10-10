@@ -8,7 +8,7 @@ var TestConfig = {
   "EnableABLoop": true,
   "EnableOnlineSubmission": true,
   "BeaqleServiceURL": "/sep_content_eval/web_service/beaqleJS_Service.php",
-  "SupervisorContact": "",
+  "SupervisorContact": "None",
   "RandomizeTestOrder": false,
   "MaxTestsPerRun": 45,
   "AudioRoot": "",
