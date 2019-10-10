@@ -856,7 +856,7 @@ $.extend({ alert: function (message, title) {
                         // if (this.TestConfig.SupervisorContact) {
                         //     $("#SubmitBox > .submitEmail").show();
                         //     $(".supervisorEmail").html(this.TestConfig.SupervisorContact);
-                        }
+                        // }
                         if (testHandle.browserFeatures.webAPIs['Blob']) {
                             $("#SubmitBox > .submitDownload").show();
                         } else {
