@@ -827,7 +827,6 @@ $.extend({ alert: function (message, title) {
     ListeningTest.prototype.SubmitTestResults = function () {
 
         var UserObj = new Object();
-        UserObj.UserName = $('#UserName').val();
         UserObj.UserEmail = $('#UserEMail').val();
         UserObj.UserComment = $('#UserComment').val();
         UserObj.Age = $('#Age').val();
