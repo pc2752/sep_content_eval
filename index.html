@@ -28,6 +28,11 @@
     <script type="text/javascript">
     /* <![CDATA[ */
         var testHandle;
+        function startTest() {
+            testHandle.initAudio()
+            $('#Footer').prepend(testHandle.browserFeatureString() + '<br/>');
+            testHandle.startTests();
+        }
         window.onload=function() {
 
             // Uncomment one of the following lines to choose the desired test class
@@ -35,7 +40,7 @@
             // testHandle = new MushraTest(TestConfig);    // <-- MUSHRA test class
             testHandle = new AbxTest(TestConfig);     // <-- ABX test class
 
-            $('#Footer').prepend(testHandle.browserFeatureString() + '<br/>');
+            // $('#Footer').prepend(testHandle.browserFeatureString() + '<br/>');
         };
     /* ]]> */
     </script>
@@ -82,7 +87,7 @@
         <br />
                         
         <!-- this button starts the first test -->
-        <button id="BtnStartTest" onclick="testHandle.startTests();">Start!</button>	
+        <button id="BtnStartTest" onclick="startTest()">Start!</button>
     </div>
 
     <!-- final text after all tests have passed -->
