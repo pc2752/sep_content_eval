@@ -827,6 +827,7 @@ $.extend({ alert: function (message, title) {
     ListeningTest.prototype.SubmitTestResults = function () {
 
         var UserObj = new Object();
+        UserObj.UserName = $('#UserName').val();
         UserObj.UserEmail = $('#UserEMail').val();
         UserObj.UserComment = $('#UserComment').val();
         UserObj.Age = $('#Age').val();
@@ -865,7 +866,7 @@ $.extend({ alert: function (message, title) {
                         $('#SubmitData').button('option',{ icons: { primary: 'ui-icon-alert' }});
                     }
                 })
-            .fail ((xhr, ajaxOptions, thrownError)=>{
+            .fail (function (xhr, ajaxOptions, thrownError){
                     $('#SubmitError').show();
                     $('#SubmitError > #ErrorCode').html(xhr.status);
                     $("#SubmitBox > .submitOnline").hide();
