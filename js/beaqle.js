@@ -847,6 +847,7 @@ $.extend({ alert: function (message, title) {
                     dataType: 'json'})
             .done( function (response){
                     if (response.error==false) {
+                        console.log(response.message)
                         $('#SubmitBox').html("Your submission was successful.<br/><br/>");
                         testHandle.TestState.TestIsRunning = 0;
                     } else {
