@@ -320,7 +320,7 @@ var TestConfig = {
       "TestID": "id30",
       "Files": {
         "A": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_scm_1.mp3",
-        "B": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_ss_1.mp3",
+        "B": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_mask_1.mp3",
         "X":"sep_content_audio/ClaraBerryAndWooldog_AirTraffic_ori_1.mp3",
         "Y": " ",
       }
@@ -339,7 +339,7 @@ var TestConfig = {
       "Name": "Audio Quality 3",
       "TestID": "id32",
       "Files": {
-        "A": "sep_content_audio/BrandonWebster_DontHearAThing_ss_1.mp3",
+        "A": "sep_content_audio/BrandonWebster_DontHearAThing_mask_1.mp3",
         "B": "sep_content_audio/BrandonWebster_DontHearAThing_scs_1.mp3",
         "X": "sep_content_audio/BrandonWebster_DontHearAThing_ori_1.mp3",
         "Y": " ",
@@ -360,7 +360,7 @@ var TestConfig = {
       "TestID": "id34",
       "Files": {
         "A": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_scm_4.mp3",
-        "B": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_ss_4.mp3",
+        "B": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_mask_4.mp3",
         "X": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_ori_4.mp3",
         "Y": " ",
       }
@@ -369,7 +369,7 @@ var TestConfig = {
       "Name": "Audio Quality 6",
       "TestID": "id35",
       "Files": {
-        "A": "sep_content_audio/BrandonWebster_DontHearAThing_ss_2.mp3",
+        "A": "sep_content_audio/BrandonWebster_DontHearAThing_mask_2.mp3",
         "B": "sep_content_audio/BrandonWebster_DontHearAThing_scs_2.mp3",
         "X": "sep_content_audio/BrandonWebster_DontHearAThing_ori_2.mp3",
         "Y": " ",
@@ -380,7 +380,7 @@ var TestConfig = {
       "TestID": "id36",
       "Files": {
         "A": "sep_content_audio/HezekiahJones_BorrowedHeart_scs_2.mp3",
-        "B": "sep_content_audio/HezekiahJones_BorrowedHeart_ss_2.mp3",
+        "B": "sep_content_audio/HezekiahJones_BorrowedHeart_mask_2.mp3",
         "X": "sep_content_audio/HezekiahJones_BorrowedHeart_ori_2.mp3",
         "Y": " ",
       }
@@ -400,7 +400,7 @@ var TestConfig = {
       "TestID": "id38",
       "Files": {
         "A": "sep_content_audio/MusicDelta_Gospel_scs_2.mp3",
-        "B": "sep_content_audio/MusicDelta_Gospel_ss_2.mp3",
+        "B": "sep_content_audio/MusicDelta_Gospel_mask_2.mp3",
         "X": "sep_content_audio/MusicDelta_Gospel_ori_2.mp3",
         "Y": " ",
       }
@@ -409,7 +409,7 @@ var TestConfig = {
       "Name": "Audio Quality 10",
       "TestID": "id39",
       "Files": {
-        "A": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_ss_1.mp3",
+        "A": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_mask_1.mp3",
         "B": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_scs_1.mp3",
         "X": "sep_content_audio/ClaraBerryAndWooldog_AirTraffic_ori_1.mp3",
         "Y": " ",
@@ -419,7 +419,7 @@ var TestConfig = {
       "Name": "Audio Quality 11",
       "TestID": "id40",
       "Files": {
-        "A": "sep_content_audio/BrandonWebster_DontHearAThing_ss_2.mp3",
+        "A": "sep_content_audio/BrandonWebster_DontHearAThing_mask_2.mp3",
         "B": "sep_content_audio/BrandonWebster_DontHearAThing_scm_2.mp3",
         "X": "sep_content_audio/BrandonWebster_DontHearAThing_ori_2.mp3",
         "Y": " ",
@@ -439,7 +439,7 @@ var TestConfig = {
       "Name": "Audio Quality 13",
       "TestID": "id42",
       "Files": {
-        "A": "sep_content_audio/AimeeNorwich_Child_ss_1.mp3",
+        "A": "sep_content_audio/AimeeNorwich_Child_mask_1.mp3",
         "B": "sep_content_audio/AimeeNorwich_Child_scm_1.mp3",
         "X": "sep_content_audio/AimeeNorwich_Child_ori_1.mp3",
         "Y": " ",
