@@ -460,7 +460,7 @@ var TestConfig = {
       "TestID": "id44",
       "Files": {
         "A": "sep_content_audio/MusicDelta_Gospel_scm_2.mp3",
-        "B": "sep_content_audio/MusicDelta_Gospel_ss_2.mp3",
+        "B": "sep_content_audio/MusicDelta_Gospel_mask_2.mp3",
         "X": "sep_content_audio/MusicDelta_Gospel_ori_2.mp3",
         "Y": " ",
       }
