@@ -14,7 +14,7 @@
     <title>BeaqleJS</title>
     
     <!-- load the test config file -->
-        <script src="config/example_config_abx.js" type="text/javascript"></script>
+        <script src="config/example_config_mushra.js" type="text/javascript"></script>
     <!---->
     
     <link type="text/css" href="css/smoothness/jquery-ui-1.8.18.custom.css" rel="Stylesheet" />
@@ -37,8 +37,8 @@
 
             // Uncomment one of the following lines to choose the desired test class
 
-            // testHandle = new MushraTest(TestConfig);    // <-- MUSHRA test class
-            testHandle = new AbxTest(TestConfig);     // <-- ABX test class
+            testHandle = new MushraTest(TestConfig);    // <-- MUSHRA test class
+            // testHandle = new AbxTest(TestConfig);     // <-- ABX test class
 
             // $('#Footer').prepend(testHandle.browserFeatureString() + '<br/>');
         };
@@ -69,7 +69,7 @@
         <!-- edit here if you want to change the welcome message  and instructions -->
 
         <div style="text-align:left">
-            Thanks for your interest in participating in the listening test. The overall test will roughly take 15 minutes. We are tyring to evaluate a source separation algorithm to isolate the singing voice from a mxiture of the singing voice and backing music. You will be presented with various music examples, with singing voice and then asked to choose the preffered clip from "A" and "B" in terms of separation quality (lack of backing music in the presented audio), audio quality (quality of the singing voice) or the intelligibility of the voice. The criteria for each test will be displayed on top. 
+            Thanks for your interest in participating in the listening test. The overall test will roughly take 15 minutes. We are tyring to evaluate source separation for SATB choirs. You will be presented with some examples and criteria to rate the examples on. You will also be provided a reference audio to which you should compare the given audios.  
 
             <br />
             <br />
@@ -77,9 +77,8 @@
             Instructions:
             <ul>
                 <li>The title of the page shows the criteria on which to rate the test items</li>
-                <li>Separation refers to the abscence of backing music (any instrument apart from the voice) in the test file. Two reference files are shown in this case, the "Mixture" file has the singing voice mixed with the backing track and the "Reference" file is just the singing voice. Preference should be given to the clip which most similar to the "Reference" and not have elements from "Mixture"</li>
-                <li>Intelligibility refers to the intelligibility of the voice. Please compare with the "Reference" clip and choose the clip, which can most clearly be understood. </li>
-                <li>Audio quality refers to the quality of the singing voice in the test item. Please compare with the "Reference" clip and choose the clip, which sounds more natural.</li>
+                <li>Further instructions are provided at the start of each test section.</li>
+
 
             </ul>
         </div>
@@ -113,11 +112,9 @@
                 Please download and save the results. Entering a name or email address is not mandatory 
                 but it would help us to contact you if we have further questions. You can also leave a comment.
             </p>
+
             <table border=0 style="margin-left: auto;margin-right: auto;">
-            <tr><td>Age:</td><td><input id="Age" type="text" size="2" maxlength="2" /></td></tr>
-            <tr><td>Gender:</td><td><input id="Gender" type="text" size="1" maxlength="1" /></td></tr>
-            <tr><td>Musical Training (Yes/No):</td><td><input id="Musical_Training" type="text" size="3" maxlength="3" /></td></tr>
-            <tr><td>Do you speak English (Yes/No)?:</td><td><input id="Language" type="text" size="3" maxlength="40" /></td></tr>
+            <tr><td>Are you a choral singer? (Yes/No)?:</td><td><input id="Language" type="text" size="3" maxlength="40" /></td></tr>
             <tr><td></td><td><textarea id="UserComment" cols="40" rows="4">Any other comments...</textarea></td></tr>
             </table>
             <br />

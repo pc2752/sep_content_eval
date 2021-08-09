@@ -1074,6 +1074,25 @@ MushraTest.prototype.createTestDOM = function (TestIdx) {
         var row = new Array();
         var cell = new Array();
 
+                if ((this.TestConfig.Testsets[TestIdx].Name == "Separation Alto")) {
+            $.alert("You are now starting the separation tests. Please rate the following clips from Bad to Excellent in terms of the separation from other sources given the mixture reference")
+            // return true;
+        } else if ((this.TestConfig.Testsets[TestIdx].Name == "Quality Alto")) {
+            $.alert("You are now starting the quality tests. Please rate the following clips from Bad to Excellent in terms of the quality of the voice with respect to the reference audio")
+
+        } else if ((this.TestConfig.Testsets[TestIdx].Name == "Melody Soprano")) {
+            $.alert("You are now starting the melody tests. Please rate the following clips from Bad to Excellent in terms of closeness to perceived melody with respect to the reference audio")
+
+        } else if ((this.TestConfig.Testsets[TestIdx].Name == "Clean Bass")) {
+            $.alert("You are now starting the melody tests. Please rate the following clips from Bad to Excellent in terms of separation from other sources with respect to the reference audio. Please note that the reference audio is not the same as the ones provided, it is just there to provide a benchmnark of separation that we are looking for")
+
+        } 
+        else{
+            // cell[4].innerHTML = "&larr; Please select preferred clip in terms of audio quality, in comparision to the refernce,<br/>or select <i>no pref.</i> for no clear preference.";  
+
+        }      
+
+
         // add reference
         fileID = "Reference";
         row  = tab.insertRow(-1);
@@ -1123,6 +1142,7 @@ MushraTest.prototype.createTestDOM = function (TestIdx) {
 
         }
 
+
         // append the created table to the DOM
         $('#TableContainer').append(tab);
 
@@ -1149,6 +1169,7 @@ MushraTest.prototype.formatResults = function () {
 
     var numCorrect = 0;
     var numWrong   = 0;
+
 
     // evaluate single tests
     for (var i = 0; i < this.TestConfig.Testsets.length; i++) {
@@ -1189,6 +1210,7 @@ MushraTest.prototype.formatResults = function () {
 
             resultstring += tab.outerHTML + "\n";
         }
+
     }
 
     return resultstring;

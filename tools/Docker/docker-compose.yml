@@ -2,7 +2,7 @@ version: "2"
 services:
   httpd:
     image: php:7.0-apache
-    container_name: sep_content_eval-httpd
+    container_name: eval_metrics-httpd
     ports:
       - "8300:80"
     volumes:

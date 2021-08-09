@@ -1,6 +1,6 @@
 // configure the test here
 var TestConfig = {
-  "TestName": "Mushra Demo Test",
+  "TestName": "Source Separation for SATB Choirs Listening Test",
   "RateScalePng": "img/scale_abs.png",
   "RateScaleBgPng": "img/scale_abs_background.png",
   "RateMinValue": 0,
@@ -10,230 +10,189 @@ var TestConfig = {
   "ShowResults": false,
   "LoopByDefault": true,
   "EnableABLoop": true,
-  "EnableOnlineSubmission": false,
-  "BeaqleServiceURL": "",
+  "EnableOnlineSubmission": true,
+  "BeaqleServiceURL": "web_service/beaqleJS_Service.php",
   "SupervisorContact": "",
-  "RandomizeTestOrder": true,
-  "MaxTestsPerRun": 2,
+  "RandomizeTestOrder": false,
+  "MaxTestsPerRun": 16,
   "RequireMaxRating": false,
   "AudioRoot": "",
   "Testsets": [
     //    
     {
-      "Name": "Separation 1",
+      "Name": "Separation Alto",
       "TestID": "id1_1",
       "Files": {
-            "Reference": "audio/21063_chorus_1_mix.mp3",
-            "1": "audio/21063_chorus_1_DCS.mp3",
-            "2": "audio/21063_chorus_1_FASST.mp3",
-            "3": "audio/21063_chorus_1_predf0.mp3",
-            "4": "audio/21063_chorus_1_orif0.mp3",
-            "anchor": "audio/21063_chorus_1_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/mixture_1.wav",
+            "1": "listening_test_songs/listening_eval/all_alto_1.wav",
+            "2": "listening_test_songs/listening_eval/ds_alto_1.wav",
+            "3": "listening_test_songs/listening_eval/base_alto_1.wav",
+            "4": "listening_test_songs/listening_eval/ds1_alto_1.wav",
+            "anchor": "listening_test_songs/listening_eval/alto_1.wav",
         }
     },
     {
-      "Name": "Audio Quality 1",
+      "Name": "Separation Bass",
       "TestID": "id1_2",
       "Files": {
-            "Reference": "audio/21063_chorus_2_mix.mp3",
-            "1": "audio/21063_chorus_2_DCS.mp3",
-            "2": "audio/21063_chorus_2_FASST.mp3",
-            "3": "audio/21063_chorus_2_predf0.mp3",
-            "4": "audio/21063_chorus_2_orif0.mp3",
-            "anchor": "audio/21063_chorus_2_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/mixture_2.wav",
+            "1": "listening_test_songs/listening_eval/all_bass_2.wav",
+            "2": "listening_test_songs/listening_eval/ds_bass_2.wav",
+            "3": "listening_test_songs/listening_eval/base_bass_2.wav",
+            "4": "listening_test_songs/listening_eval/ds1_bass_2.wav",
+            "anchor": "listening_test_songs/listening_eval/bass_2.wav",
         }
     },
     {
-      "Name": "Intelligibility 1",
+      "Name": "Separation Tenor",
       "TestID": "id1_3",
       "Files": {
-            "Reference": "audio/21063_chorus_3_mix.mp3",
-            "1": "audio/21063_chorus_3_DCS.mp3",
-            "2": "audio/21063_chorus_3_FASST.mp3",
-            "3": "audio/21063_chorus_3_predf0.mp3",
-            "4": "audio/21063_chorus_3_orif0.mp3",
-            "anchor": "audio/21063_chorus_3_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/mixture_1.wav",
+            "1": "listening_test_songs/listening_eval/all_tenor_1.wav",
+            "2": "listening_test_songs/listening_eval/ds_tenor_1.wav",
+            "3": "listening_test_songs/listening_eval/base_tenor_1.wav",
+                        "4": "listening_test_songs/listening_eval/ds1_tenor_1.wav",
+            "anchor": "listening_test_songs/listening_eval/tenor_1.wav",
         }
     },
     {
-      "Name": "Separation 2",
+      "Name": "Separation Soprano",
       "TestID": "id1_4",
       "Files": {
-            "Reference": "audio/21084_verse_1_mix.mp3",
-            "1": "audio/21084_verse_1_DCS.mp3",
-            "2": "audio/21084_verse_1_FASST.mp3",
-            "3": "audio/21084_verse_1_predf0.mp3",
-            "4": "audio/21084_verse_1_orif0.mp3",
-            "anchor": "audio/21084_verse_1_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/mixture_1.wav",
+            "1": "listening_test_songs/listening_eval/all_soprano_1.wav",
+            "2": "listening_test_songs/listening_eval/ds_soprano_1.wav",
+            "3": "listening_test_songs/listening_eval/base_soprano_1.wav",
+            "4": "listening_test_songs/listening_eval/ds1_soprano_1.wav",
+            "anchor": "listening_test_songs/listening_eval/soprano_1.wav",
         }
     },
     {
-      "Name": "Audio Quality 2",
+      "Name": "Quality Alto",
       "TestID": "id1_5",
       "Files": {
-            "Reference": "audio/21084_verse_2_mix.mp3",
-            "1": "audio/21084_verse_2_DCS.mp3",
-            "2": "audio/21084_verse_2_FASST.mp3",
-            "3": "audio/21084_verse_2_predf0.mp3",
-            "4": "audio/21084_verse_2_orif0.mp3",
-            "anchor": "audio/21084_verse_2_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/alto_2.wav",
+            "1": "listening_test_songs/listening_eval/all_alto_2.wav",
+            "2": "listening_test_songs/listening_eval/ds_alto_2.wav",
+            "3": "listening_test_songs/listening_eval/base_alto_2.wav",
+              "4": "listening_test_songs/listening_eval/ds1_alto_2.wav",
+            "anchor": "listening_test_songs/listening_eval/alto_2.wav",
         }
     },
     {
-      "Name": "Intelligibility 2",
+      "Name": "Quality Bass",
       "TestID": "id1_6",
       "Files": {
-            "Reference": "audio/21084_verse_3_mix.mp3",
-            "1": "audio/21084_verse_3_DCS.mp3",
-            "2": "audio/21084_verse_3_FASST.mp3",
-            "3": "audio/21084_verse_3_predf0.mp3",
-            "4": "audio/21084_verse_3_orif0.mp3",
-            "anchor": "audio/21084_verse_3_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/bass_1.wav",
+            "1": "listening_test_songs/listening_eval/all_bass_1.wav",
+            "2": "listening_test_songs/listening_eval/ds_bass_1.wav",
+            "3": "listening_test_songs/listening_eval/base_bass_1.wav",
+            "4": "listening_test_songs/listening_eval/ds1_bass_1.wav",
+            "anchor": "listening_test_songs/listening_eval/bass_1.wav",
         }
     },
     {
-      "Name": "Separation 3",
+      "Name": "Quality Tenor",
       "TestID": "id1_7",
       "Files": {
-            "Reference": "audio/31101_verse_1_mix.mp3",
-            "1": "audio/31101_verse_1_DCS.mp3",
-            "2": "audio/31101_verse_1_FASST.mp3",
-            "3": "audio/31101_verse_1_predf0.mp3",
-            "4": "audio/31101_verse_1_orif0.mp3",
-            "anchor": "audio/31101_verse_1_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/tenor_2.wav",
+            "1": "listening_test_songs/listening_eval/all_tenor_2.wav",
+            "2": "listening_test_songs/listening_eval/ds_tenor_2.wav",
+            "3": "listening_test_songs/listening_eval/base_tenor_2.wav",
+            "4": "listening_test_songs/listening_eval/ds1_tenor_2.wav",
+            "anchor": "listening_test_songs/listening_eval/tenor_2.wav",
         }
     },
     {
-      "Name": "Audio Quality 3",
+      "Name": "Quality Soprano",
       "TestID": "id1_8",
       "Files": {
-            "Reference": "audio/31101_verse_2_mix.mp3",
-            "1": "audio/31101_verse_2_DCS.mp3",
-            "2": "audio/31101_verse_2_FASST.mp3",
-            "3": "audio/31101_verse_2_predf0.mp3",
-            "4": "audio/31101_verse_2_orif0.mp3",
-            "anchor": "audio/31101_verse_2_ori.mp3",
+            "Reference": "listening_test_songs/listening_eval/soprano_2.wav",
+            "1": "listening_test_songs/listening_eval/all_soprano_2.wav",
+            "2": "listening_test_songs/listening_eval/ds_soprano_2.wav",
+            "3": "listening_test_songs/listening_eval/base_soprano_2.wav",
+            "4": "listening_test_songs/listening_eval/ds1_soprano_2.wav",
+            "anchor": "listening_test_songs/listening_eval/soprano_2.wav",
         }
-    },
+      },
+
     {
-      "Name": "Intelligibility 3",
+      "Name": "Melody Soprano",
       "TestID": "id1_9",
       "Files": {
-            "Reference": "audio/31101_verse_3_mix.mp3",
-            "1": "audio/31101_verse_3_DCS.mp3",
-            "2": "audio/31101_verse_3_FASST.mp3",
-            "3": "audio/31101_verse_3_predf0.mp3",
-            "4": "audio/31101_verse_3_orif0.mp3",
-            "anchor": "audio/31101_verse_3_ori.mp3",
+            "Reference": "listening_test_songs/melody/soprano_unison.mp3",
+            "1": "listening_test_songs/melody/soprano_sep.mp3",
+            "2": "listening_test_songs/melody/soprano_weighted.mp3",
         }
-    },
+      },
+
     {
-      "Name": "Separation 4",
+      "Name": "Melody Alto",
       "TestID": "id1_10",
       "Files": {
-            "Reference": "audio/31114_verse_1_mix.mp3",
-            "1": "audio/31114_verse_1_DCS.mp3",
-            "2": "audio/31114_verse_1_FASST.mp3",
-            "3": "audio/31114_verse_1_predf0.mp3",
-            "4": "audio/31114_verse_1_orif0.mp3",
-            "anchor": "audio/31114_verse_1_ori.mp3",
+            "Reference": "listening_test_songs/melody/alto_unison.mp3",
+            "1": "listening_test_songs/melody/alto_sep.mp3",
+            "2": "listening_test_songs/melody/alto_weighted.mp3",
         }
-    },
+      },
+
     {
-      "Name": "Audio Quality 4",
+      "Name": "Melody Tenor",
       "TestID": "id1_11",
       "Files": {
-            "Reference": "audio/31114_verse_2_mix.mp3",
-            "1": "audio/31114_verse_2_DCS.mp3",
-            "2": "audio/31114_verse_2_FASST.mp3",
-            "3": "audio/31114_verse_2_predf0.mp3",
-            "4": "audio/31114_verse_2_orif0.mp3",
-            "anchor": "audio/31114_verse_2_ori.mp3",
+            "Reference": "listening_test_songs/melody/tenor_unison.mp3",
+            "1": "listening_test_songs/melody/tenor_sep.mp3",
+            "2": "listening_test_songs/melody/tenor_weighted.mp3",
         }
-    },
+      },
+
     {
-      "Name": "Intelligibility 4",
+      "Name": "Melody Bass",
       "TestID": "id1_12",
       "Files": {
-            "Reference": "audio/31114_verse_3_mix.mp3",
-            "1": "audio/31114_verse_3_DCS.mp3",
-            "2": "audio/31114_verse_3_FASST.mp3",
-            "3": "audio/31114_verse_3_predf0.mp3",
-            "4": "audio/31114_verse_3_orif0.mp3",
-            "anchor": "audio/31114_verse_3_ori.mp3",
+            "Reference": "listening_test_songs/melody/bass_unison.mp3",
+            "1": "listening_test_songs/melody/bass_sep.mp3",
+            "2": "listening_test_songs/melody/bass_weighted.mp3",
         }
-    },
+      },
+
     {
-      "Name": "Separation 5",
-      "TestID": "id1_10",
-      "Files": {
-            "Reference": "audio/31114_verse_4_mix.mp3",
-            "1": "audio/31114_verse_4_DCS.mp3",
-            "2": "audio/31114_verse_4_FASST.mp3",
-            "3": "audio/31114_verse_4_predf0.mp3",
-            "4": "audio/31114_verse_4_orif0.mp3",
-            "anchor": "audio/31114_verse_4_ori.mp3",
-        }
-    },
-    {
-      "Name": "Audio Quality 5",
-      "TestID": "id1_11",
-      "Files": {
-            "Reference": "audio/31129_chorus_2_mix.mp3",
-            "1": "audio/31129_chorus_2_DCS.mp3",
-            "2": "audio/31129_chorus_2_FASST.mp3",
-            "3": "audio/31129_chorus_2_predf0.mp3",
-            "4": "audio/31129_chorus_2_orif0.mp3",
-            "anchor": "audio/31114_verse_2_ori.mp3",
-        }
-    },
-    {
-      "Name": "Intelligibility 5",
-      "TestID": "id1_12",
-      "Files": {
-            "Reference": "audio/31129_chorus_1_mix.mp3",
-            "1": "audio/31129_chorus_1_DCS.mp3",
-            "2": "audio/31129_chorus_1_FASST.mp3",
-            "3": "audio/31129_chorus_1_predf0.mp3",
-            "4": "audio/31129_chorus_1_orif0.mp3",
-            "anchor": "audio/31129_chorus_1_ori.mp3",
-        }
-    },
-    {
-      "Name": "Separation 6",
+      "Name": "Clean Bass",
       "TestID": "id1_13",
       "Files": {
-            "Reference": "audio/31129_chorus_4_mix.mp3",
-            "1": "audio/31129_chorus_4_DCS.mp3",
-            "2": "audio/31129_chorus_4_FASST.mp3",
-            "3": "audio/31129_chorus_4_predf0.mp3",
-            "4": "audio/31129_chorus_4_orif0.mp3",
-            "anchor": "audio/31129_chorus_4_ori.mp3",
+            "Reference": "listening_test_songs/melody/bass.mp3",
+            "1": "listening_test_songs/esmuc_cleaning/bass_cleaned.mp3",
+            "2": "listening_test_songs/esmuc_cleaning/bass_ori.mp3",
         }
-    },
+      },
+
     {
-      "Name": "Audio Quality 6",
+      "Name": "Clean Soprano",
       "TestID": "id1_14",
       "Files": {
-            "Reference": "audio/31129_chorus_3_mix.mp3",
-            "1": "audio/31129_chorus_3_DCS.mp3",
-            "2": "audio/31129_chorus_3_FASST.mp3",
-            "3": "audio/31129_chorus_3_predf0.mp3",
-            "4": "audio/31129_chorus_3_orif0.mp3",
-            "anchor": "audio/31114_verse_3_ori.mp3",
+            "Reference": "listening_test_songs/melody/soprano.mp3",
+            "1": "listening_test_songs/esmuc_cleaning/sop_cleaned.mp3",
+            "2": "listening_test_songs/esmuc_cleaning/sop_ori.mp3",
         }
-    },
+      },
+
     {
-      "Name": "Intelligibility 6",
+      "Name": "Clean Tenor",
       "TestID": "id1_15",
       "Files": {
-            "Reference": "audio/31136_verse_1_mix.mp3",
-            "1": "audio/31136_verse_1_DCS.mp3",
-            "2": "audio/31136_verse_1_FASST.mp3",
-            "3": "audio/31136_verse_1_predf0.mp3",
-            "4": "audio/31136_verse_1_orif0.mp3",
-            "anchor": "audio/31136_verse_1_ori.mp3",
+            "Reference": "listening_test_songs/melody/tenor.mp3",
+            "1": "listening_test_songs/esmuc_cleaning/tenor_cleaned.mp3",
+            "2": "listening_test_songs/esmuc_cleaning/tenor_ori.mp3",
         }
-    },
+      },
+    {
+      "Name": "Clean Alto",
+      "TestID": "id1_15",
+      "Files": {
+            "Reference": "listening_test_songs/melody/alto.mp3",
+            "1": "listening_test_songs/esmuc_cleaning/alto_cleaned.mp3",
+            "2": "listening_test_songs/esmuc_cleaning/alto_ori.mp3",
+        }
+      },
   ]
 }
